@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USA Visa Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>USA Visa Application Form</h2>
+    <form action="/submit" method="post">
+        <table>
+            <tr>
+                <th>Information</th>
+                <th>Main Applicant</th>
+                <th>Member-1</th>
+                <th>Member-2</th>
+            </tr>
+            <tr>
+                <td>Surnames</td>
+                <td><input type="text" name="main_applicant_surname" required></td>
+                <td><input type="text" name="member1_surname" required></td>
+                <td><input type="text" name="member2_surname" required></td>
+            </tr>
+            <tr>
+                <td>Given Names</td>
+                <td><input type="text" name="main_applicant_given_name" required></td>
+                <td><input type="text" name="member1_given_name" required></td>
+                <td><input type="text" name="member2_given_name" required></td>
+            </tr>
+            <tr>
+                <td>Any Other Name (Before Marriage Name)</td>
+                <td><input type="text" name="main_applicant_other_name"></td>
+                <td><input type="text" name="member1_other_name"></td>
+                <td><input type="text" name="member2_other_name"></td>
+            </tr>
+            <!-- Add more rows as necessary based on the Excel structure -->
+        </table>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
