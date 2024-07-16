@@ -1,61 +1,375 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USA Visa Application Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        h2 {
-            text-align: center;
-        }
-    </style>
+    <title>Client Information Form</title>
 </head>
 <body>
-    <h2>USA Visa Application Form</h2>
-    <form action="/submit" method="post">
-        <table>
-            <tr>
-                <th>Information</th>
-                <th>Main Applicant</th>
-                <th>Member-1</th>
-                <th>Member-2</th>
-            </tr>
-            <tr>
-                <td>Surnames</td>
-                <td><input type="text" name="main_applicant_surname" required></td>
-                <td><input type="text" name="member1_surname" required></td>
-                <td><input type="text" name="member2_surname" required></td>
-            </tr>
-            <tr>
-                <td>Given Names</td>
-                <td><input type="text" name="main_applicant_given_name" required></td>
-                <td><input type="text" name="member1_given_name" required></td>
-                <td><input type="text" name="member2_given_name" required></td>
-            </tr>
-            <tr>
-                <td>Any Other Name (Before Marriage Name)</td>
-                <td><input type="text" name="main_applicant_other_name"></td>
-                <td><input type="text" name="member1_other_name"></td>
-                <td><input type="text" name="member2_other_name"></td>
-            </tr>
-            <!-- Add more rows as necessary based on the Excel structure -->
-        </table>
-        <br>
+    <h1>Personal Information</h1>
+    <form>
+        <label for="surnames">Surnames:</label>
+        <input type="text" id="surnames" name="surnames"><br><br>
+
+        <label for="givenNames">Given Names:</label>
+        <input type="text" id="givenNames" name="givenNames"><br><br>
+
+        <label for="otherName">Any Other Name (Before Marriage Name):</label>
+        <input type="text" id="otherName" name="otherName"><br><br>
+
+        <label for="maritalStatus">Marital Status:</label>
+        <input type="text" id="maritalStatus" name="maritalStatus"><br><br>
+
+        <label for="dateOfBirth">Date Of Birth:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth"><br><br>
+
+        <label for="placeOfBirth">Place Of Birth:</label>
+        <input type="text" id="placeOfBirth" name="placeOfBirth"><br><br>
+
+        <h1>Travel Information</h1>
+
+        <label for="dateOfArrival">Date Of Arrival In U.S.:</label>
+        <input type="date" id="dateOfArrival" name="dateOfArrival"><br><br>
+
+        <label for="placeOfArrival">Place Of Arrival In U.S.:</label>
+        <input type="text" id="placeOfArrival" name="placeOfArrival"><br><br>
+
+        <label for="dateOfDeparture">Date Of Departure From U.S.:</label>
+        <input type="date" id="dateOfDeparture" name="dateOfDeparture"><br><br>
+
+        <label for="placeOfDeparture">Place Of Departure From U.S.:</label>
+        <input type="text" id="placeOfDeparture" name="placeOfDeparture"><br><br>
+
+        <label for="locationsToVisit">Locations You Plan To Visit In The U.S.:</label>
+        <textarea id="locationsToVisit" name="locationsToVisit"></textarea><br><br>
+
+        <label for="addressInUS">Address Where You Will Stay In The U.S.:</label>
+        <textarea id="addressInUS" name="addressInUS"></textarea><br><br>
+
+        <h1>Person/Entity Paying for Your Trip</h1>
+
+        <label for="payerSurnames">Surnames:</label>
+        <input type="text" id="payerSurnames" name="payerSurnames"><br><br>
+
+        <label for="payerGivenNames">Given Names:</label>
+        <input type="text" id="payerGivenNames" name="payerGivenNames"><br><br>
+
+        <label for="payerTelephone">Telephone Number:</label>
+        <input type="tel" id="payerTelephone" name="payerTelephone"><br><br>
+
+        <label for="payerEmail">Email Address:</label>
+        <input type="email" id="payerEmail" name="payerEmail"><br><br>
+
+        <label for="relation">Relation:</label>
+        <input type="text" id="relation" name="relation"><br><br>
+
+        <h1>Travel Companions Information</h1>
+
+        <label for="travelCompanions">Persons Traveling With You:</label>
+        <textarea id="travelCompanions" name="travelCompanions"></textarea><br><br>
+
+        <label for="group">Enter The Name Of The Group You Are Traveling:</label>
+        <input type="text" id="group" name="group"><br><br>
+
+        <h1>Previous U.S. Travel Information</h1>
+
+        <label for="appliedForVisa">Have You Ever Applied For A U.S. Visa?</label>
+        <input type="radio" id="appliedForVisaYes" name="appliedForVisa" value="yes">
+        <label for="appliedForVisaYes">Yes</label>
+        <input type="radio" id="appliedForVisaNo" name="appliedForVisa" value="no">
+        <label for="appliedForVisaNo">No</label><br><br>
+
+        <label for="purposeOfApplied">Purpose Of Applied:</label>
+        <input type="text" id="purposeOfApplied" name="purposeOfApplied"><br><br>
+
+        <label for="issuedVisa">Have You Ever Been Issued A U.S. Visa?</label>
+        <input type="radio" id="issuedVisaYes" name="issuedVisa" value="yes">
+        <label for="issuedVisaYes">Yes</label>
+        <input type="radio" id="issuedVisaNo" name="issuedVisa" value="no">
+        <label for="issuedVisaNo">No</label><br><br>
+
+        <label for="typeOfVisa">Type Of Visa Approved:</label>
+        <input type="text" id="typeOfVisa" name="typeOfVisa"><br><br>
+
+        <label for="visaIssueDate">Visa Issue Month/Year:</label>
+        <input type="month" id="visaIssueDate" name="visaIssueDate"><br><br>
+
+        <label for="visaExpiryDate">Visa Valid Till Month/Year:</label>
+        <input type="month" id="visaExpiryDate" name="visaExpiryDate"><br><br>
+
+        <label for="visaNumber">Visa Number:</label>
+        <input type="text" id="visaNumber" name="visaNumber"><br><br>
+
+        <label for="applyingForSameVisa">Applying For Same Visa?</label>
+        <input type="radio" id="applyingForSameVisaYes" name="applyingForSameVisa" value="yes">
+        <label for="applyingForSameVisaYes">Yes</label>
+        <input type="radio" id="applyingForSameVisaNo" name="applyingForSameVisa" value="no">
+        <label for="applyingForSameVisaNo">No</label><br><br>
+
+        <label for="applyingForSamePlace">Applying For Same Place?</label>
+        <input type="radio" id="applyingForSamePlaceYes" name="applyingForSamePlace" value="yes">
+        <label for="applyingForSamePlaceYes">Yes</label>
+        <input type="radio" id="applyingForSamePlaceNo" name="applyingForSamePlace" value="no">
+        <label for="applyingForSamePlaceNo">No</label><br><br>
+
+        <label for="previousVisaLost">Any Previous Visa Lost Or Cancelled?</label>
+        <input type="radio" id="previousVisaLostYes" name="previousVisaLost" value="yes">
+        <label for="previousVisaLostYes">Yes</label>
+        <input type="radio" id="previousVisaLostNo" name="previousVisaLost" value="no">
+        <label for="previousVisaLostNo">No</label><br><br>
+
+        <label for="refusedVisa">Have You Ever Been Refused A U.S. Visa, Or Been Refused Admission To The United States, Or Withdrawn Your Application For Admission At The Port Of Entry?</label>
+        <input type="radio" id="refusedVisaYes" name="refusedVisa" value="yes">
+        <label for="refusedVisaYes">Yes</label>
+        <input type="radio" id="refusedVisaNo" name="refusedVisa" value="no">
+        <label for="refusedVisaNo">No</label><br><br>
+
+        <label for="reasonForRefusal">Reason For The Refusal:</label>
+        <input type="text" id="reasonForRefusal" name="reasonForRefusal"><br><br>
+
+        <label for="refusalDate">Refusal Month/Year:</label>
+        <input type="month" id="refusalDate" name="refusalDate"><br><br>
+
+        <label for="beenInUS">Have You Ever Been In The U.S.?</label>
+        <input type="radio" id="beenInUSYes" name="beenInUS" value="yes">
+        <label for="beenInUSYes">Yes</label>
+        <input type="radio" id="beenInUSNo" name="beenInUS" value="no">
+        <label for="beenInUSNo">No</label><br><br>
+
+        <label for="arrivalDateInUS">Date Of Arrival In U.S.:</label>
+        <input type="date" id="arrivalDateInUS" name="arrivalDateInUS"><br><br>
+
+        <label for="durationOfStay">Duration Of Stay:</label>
+        <input type="text" id="durationOfStay" name="durationOfStay"><br><br>
+
+        <label for="purposeOfTour">Purpose Of Tour:</label>
+        <input type="text" id="purposeOfTour" name="purposeOfTour"><br><br>
+
+        <label for="immigrantPetition">Has Anyone Ever Filed An Immigrant Petition On Your Behalf With The United States Citizenship And Immigration Services?</label>
+        <input type="radio" id="immigrantPetitionYes" name="immigrantPetition" value="yes">
+        <label for="immigrantPetitionYes">Yes</label>
+        <input type="radio" id="immigrantPetitionNo" name="immigrantPetition" value="no">
+        <label for="immigrantPetitionNo">No</label><br><br>
+
+        <label for="typeOfPetition">Type Of Petition File (Relative/ Eb 5 Etc):</label>
+        <input type="text" id="typeOfPetition" name="typeOfPetition"><br><br>
+
+        <label for="submissionReceipt">Submission Receipt Number:</label>
+        <input type="text" id="submissionReceipt" name="submissionReceipt"><br><br>
+
+        <label for="applicationDate">Date Of Application:</label>
+        <input type="date" id="applicationDate" name="applicationDate"><br><br>
+
+        <label for="applicationStatus">Current Status Of Application:</label>
+        <input type="text" id="applicationStatus" name="applicationStatus"><br><br>
+
+        <h1>Address and Phone Information</h1>
+
+        <label for="homeAddress">Home Address:</label>
+        <textarea id="homeAddress" name="homeAddress"></textarea><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="socialMedia">Social Media Account Link:</label>
+        <input type="url" id="socialMedia" name="socialMedia"><br><br>
+
+        <h1>Passport Detail</h1>
+
+        <label for="passportNumber">Passport/Travel Document Number:</label>
+        <input type="text" id="passportNumber" name="passportNumber"><br><br>
+
+        <label for="issuePlace">Issue Place:</label>
+        <input type="text" id="issuePlace" name="issuePlace"><br><br>
+
+        <label for="issueDate">Issue Date:</label>
+        <input type="date" id="issueDate" name="issueDate"><br><br>
+
+        <label for="expiryDate">Expiration Date:</label>
+        <input type="date" id="expiryDate" name="expiryDate"><br><br>
+
+        <label for="lostPassport">Lost Or Stolen Passport Detail If Have:</label>
+        <textarea id="lostPassport" name="lostPassport"></textarea><br><br>
+
+        <h1>U.S. Point of Contact Information</h1>
+
+        <label for="contactName">Name Of Contact Person Or Organization In The United States:</label>
+        <input type="text" id="contactName" name="contactName"><br><br>
+
+        <label for="contactAddress">Address:</label>
+        <textarea id="contactAddress" name="contactAddress"></textarea><br><br>
+
+        <label for="contactEmail">Email:</label>
+        <input type="email" id="contactEmail" name="contactEmail"><br><br>
+
+        <label for="contactPhone">Phone Number:</label>
+        <input type="tel" id="contactPhone" name="contactPhone"><br><br>
+
+        <h1>Family Information: Relatives</h1>
+
+        <label for="fatherName">Father's Full Name:</label>
+        <input type="text" id="fatherName" name="fatherName"><br><br>
+
+        <label for="fatherDOB">Date Of Birth:</label>
+        <input type="date" id="fatherDOB" name="fatherDOB"><br><br>
+
+        <label for="motherName">Mother's Full Name:</label>
+        <input type="text" id="motherName" name="motherName"><br><br>
+
+        <label for="motherDOB">Date Of Birth:</label>
+        <input type="date" id="motherDOB" name="motherDOB"><br><br>
+
+        <label for="parentInUSA">Father or Mother in the USA?</label>
+        <input type="radio" id="parentInUSAYes" name="parentInUSA" value="yes">
+        <label for="parentInUSAYes">Yes</label>
+        <input type="radio" id="parentInUSANo" name="parentInUSA" value="no">
+        <label for="parentInUSANo">No</label><br><br>
+
+        <label for="immediateRelativeName">Name Of Immediate Relative:</label>
+        <input type="text" id="immediateRelativeName" name="immediateRelativeName"><br><br>
+
+        <label for="immediateRelativeAddress">Address Of Immediate Relative:</label>
+        <textarea id="immediateRelativeAddress" name="immediateRelativeAddress"></textarea><br><br>
+
+        <label for="immediateRelativePhone">Contact Number Of Immediate Relative:</label>
+        <input type="tel" id="immediateRelativePhone" name="immediateRelativePhone"><br><br>
+
+        <label for="immediateRelativeEmail">Email Id Of Immediate Relative:</label>
+        <input type="email" id="immediateRelativeEmail" name="immediateRelativeEmail"><br><br>
+
+        <label for="immediateRelativeStatus">Immediate Relative's Immigration Status:</label>
+        <input type="text" id="immediateRelativeStatus" name="immediateRelativeStatus"><br><br>
+
+        <label for="relationWithRelative">Relation With You:</label>
+        <input type="text" id="relationWithRelative" name="relationWithRelative"><br><br>
+
+        <label for="otherRelative">Do You Have Any Other Relatives In The United States?</label>
+        <input type="radio" id="otherRelativeYes" name="otherRelative" value="yes">
+        <label for="otherRelativeYes">Yes</label>
+        <input type="radio" id="otherRelativeNo" name="otherRelative" value="no">
+        <label for="otherRelativeNo">No</label><br><br>
+
+        <label for="otherRelativeName">Name Of Other Relative:</label>
+        <input type="text" id="otherRelativeName" name="otherRelativeName"><br><br>
+
+        <label for="otherRelativeAddress">Address Of Other Relative:</label>
+        <textarea id="otherRelativeAddress" name="otherRelativeAddress"></textarea><br><br>
+
+        <label for="otherRelativePhone">Contact Number Of Other Relative:</label>
+        <input type="tel" id="otherRelativePhone" name="otherRelativePhone"><br><br>
+
+        <label for="otherRelativeEmail">Email Id Of Other Relative:</label>
+        <input type="email" id="otherRelativeEmail" name="otherRelativeEmail"><br><br>
+
+        <h1>Spouse's Detail</h1>
+
+        <label for="spouseDOB">Spouse's Date Of Birth:</label>
+        <input type="date" id="spouseDOB" name="spouseDOB"><br><br>
+
+        <label for="spousePlaceOfBirth">Spouse's Place Of Birth:</label>
+        <input type="text" id="spousePlaceOfBirth" name="spousePlaceOfBirth"><br><br>
+
+        <label for="spouseAddress">Spouse's Address:</label>
+        <textarea id="spouseAddress" name="spouseAddress"></textarea><br><br>
+
+        <h1>Present Work/Education/Training Information</h1>
+
+        <label for="occupation">Primary Occupation:</label>
+        <input type="text" id="occupation" name="occupation"><br><br>
+
+        <label for="employerName">Present Employer Name:</label>
+        <input type="text" id="employerName" name="employerName"><br><br>
+
+        <label for="employerAddress">Present Employer Address:</label>
+        <textarea id="employerAddress" name="employerAddress"></textarea><br><br>
+
+        <label for="employerPhone">Present Employer Phone Number:</label>
+        <input type="tel" id="employerPhone" name="employerPhone"><br><br>
+
+        <label for="startDay">Start Day:</label>
+        <input type="date" id="startDay" name="startDay"><br><br>
+
+        <label for="monthlyIncome">Monthly Income:</label>
+        <input type="text" id="monthlyIncome" name="monthlyIncome"><br><br>
+
+        <label for="duties">Briefly Describe Your Duties:</label>
+        <textarea id="duties" name="duties"></textarea><br><br>
+
+        <label for="natureOfBusiness">Nature Of Business:</label>
+        <input type="text" id="natureOfBusiness" name="natureOfBusiness"><br><br>
+
+        <label for="jobDescription">Job Description/Duties:</label>
+        <textarea id="jobDescription" name="jobDescription"></textarea><br><br>
+
+        <label for="numberOfEmployees">Number Of Employees:</label>
+        <input type="text" id="numberOfEmployees" name="numberOfEmployees"><br><br>
+
+        <label for="annualTurnover">Total Annual Turnover:</label>
+        <input type="text" id="annualTurnover" name="annualTurnover"><br><br>
+
+        <label for="annualIncome">Total Annual Income:</label>
+        <input type="text" id="annualIncome" name="annualIncome"><br><br>
+
+        <label for="liquidFund">Total Liquid Fund (FD/RD/Mutual/PF):</label>
+        <input type="text" id="liquidFund" name="liquidFund"><br><br>
+
+        <label for="propertyWorth">Property Worth INR:</label>
+        <input type="text" id="propertyWorth" name="propertyWorth"><br><br>
+
+        <h1>Previous Work Information</h1>
+
+        <label for="previousWork">Name And Duties In Previous Work/Business Organization If Have:</label>
+        <textarea id="previousWork" name="previousWork"></textarea><br><br>
+
+        <h1>Study Detail: (12th and all higher education)</h1>
+
+        <label for="institutionName">Name Of Institution:</label>
+        <input type="text" id="institutionName" name="institutionName"><br><br>
+
+        <label for="institutionAddress">Address Of Institution:</label>
+        <textarea id="institutionAddress" name="institutionAddress"></textarea><br><br>
+
+        <label for="courseOfStudy">Course Of Study:</label>
+        <input type="text" id="courseOfStudy" name="courseOfStudy"><br><br>
+
+        <label for="attendanceFromDate">Date Of Attendance From:</label>
+        <input type="date" id="attendanceFromDate" name="attendanceFromDate"><br><br>
+
+        <label for="attendanceToDate">Date Of Attendance To:</label>
+        <input type="date" id="attendanceToDate" name="attendanceToDate"><br><br>
+
+        <h1>Previous Education Information</h1>
+
+        <label for="previousEmployerName">Employer Name:</label>
+        <input type="text" id="previousEmployerName" name="previousEmployerName"><br><br>
+
+        <label for="previousEmployerAddress">Employer Address:</label>
+        <textarea id="previousEmployerAddress" name="previousEmployerAddress"></textarea><br><br>
+
+        <label for="previousEmployerPhone">Employer Number:</label>
+        <input type="tel" id="previousEmployerPhone" name="previousEmployerPhone"><br><br>
+
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" name="jobTitle"><br><br>
+
+        <label for="supervisor">Supervisor's Name/Number:</label>
+        <input type="text" id="supervisor" name="supervisor"><br><br>
+
+        <label for="previousEmploymentDates">Start Day / End Day:</label>
+        <input type="text" id="previousEmploymentDates" name="previousEmploymentDates"><br><br>
+
+        <label for="dutiesBrief">Duties in Brief:</label>
+        <textarea id="dutiesBrief" name="dutiesBrief"></textarea><br><br>
+
+        <h1>Additional Work/Education/Training Information</h1>
+
+        <label for="languages">Provide A List Of Languages You Speak:</label>
+        <textarea id="languages" name="languages"></textarea><br><br>
+
+        <label for="visitedCountries">Detail Of Visited Any Countries/Regions:</label>
+        <textarea id="visitedCountries" name="visitedCountries"></textarea><br><br>
+
         <input type="submit" value="Submit">
     </form>
 </body>
